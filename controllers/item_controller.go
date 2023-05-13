@@ -43,13 +43,13 @@ func InsertItemController(c echo.Context) error {
 	// Bila gagal memasukkan item
 	if result.Error != nil {
 		return c.JSON(http.StatusInternalServerError, models.BaseResponse{
-			Status: false, Message: "Gagal menambah pegawai", Data: nil,
+			Status: false, Message: "Gagal menambah item", Data: nil,
 		})
 	}
 
 	// Status berhasil memasukkan item
 	return c.JSON(http.StatusOK, models.BaseResponse{
-		Status: true, Message: "Berhasil menambah pegawai", Data: insertItem,
+		Status: true, Message: "Berhasil menambah item", Data: insertItem,
 	})
 }
 
